@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+/* Custom colors as CSS variables */
+:root {
+  --primary: #0D1B2A;
+  --primary-foreground: #ffffff;
+  --accent: #00C80F;
+  --accent-foreground: #ffffff;
+  --warning: #FFD700;
+  --warning-foreground: #333333;
+  --muted: #F8F9FA;
+  --muted-foreground: #64748b;
+}
+
+body {
+  background-color: var(--muted);
+  color: #333333;
+}
