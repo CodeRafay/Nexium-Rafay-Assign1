@@ -16,3 +16,31 @@ body {
   background-color: var(--muted);
   color: #333333;
 }
+
+/* Responsive base styles */
+html {
+  font-size: 16px;
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+/* Improve touch targets for mobile */
+@media (max-width: 768px) {
+  button, input, select, textarea {
+    min-height: 44px;
+  }
+}
+
+/* Ensure proper viewport handling */
+* {
+  box-sizing: border-box;
+}
+
+/* Prevent horizontal scroll on small screens */
+body {
+  overflow-x: hidden;
+}

@@ -26,12 +26,17 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+      </head>
       <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
+        className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen`}
       >
         {children}
         <Toaster 
           position="top-center"
+          expand={true}
+          visibleToasts={3}
           toastOptions={{
             style: {
               background: '#ffffff',

@@ -47,7 +47,7 @@ export default function QuoteForm({ onSearch, isLoading }: QuoteFormProps) {
 
   return (
     <div className="w-full max-w-2xl mx-auto">
-      <form onSubmit={handleSubmit} className="space-y-6">
+      <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
         <div className="relative group">
           <div className={`absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 rounded-lg blur opacity-25 transition-opacity duration-300 ${isFocused ? 'opacity-75' : 'opacity-0'}`}></div>
           
@@ -59,23 +59,23 @@ export default function QuoteForm({ onSearch, isLoading }: QuoteFormProps) {
               onChange={handleInputChange}
               onFocus={() => setIsFocused(true)}
               onBlur={() => setIsFocused(false)}
-              className={`h-14 pr-14 text-lg font-medium border-2 rounded-lg transition-all duration-300 bg-white/90 backdrop-blur-sm ${
+              className={`h-12 sm:h-14 pr-12 sm:pr-14 text-base sm:text-lg font-medium border-2 rounded-lg transition-all duration-300 bg-white/90 backdrop-blur-sm ${
                 isFocused 
-                  ? 'border-green-400 shadow-lg scale-105' 
+                  ? 'border-green-400 shadow-lg md:scale-105' 
                   : 'border-gray-200 hover:border-gray-300'
               }`}
               disabled={isLoading}
               style={{ 
                 color: '#0D1B2A',
-                fontSize: '1.1rem'
+                fontSize: 'clamp(1rem, 2.5vw, 1.1rem)'
               }}
             />
             
-            <div className="absolute right-4 top-1/2 transform -translate-y-1/2 flex items-center space-x-2">
+            <div className="absolute right-3 sm:right-4 top-1/2 transform -translate-y-1/2 flex items-center space-x-1 sm:space-x-2">
               {topic && !isLoading && (
-                <Sparkles className="h-5 w-5 text-green-500 animate-pulse" />
+                <Sparkles className="h-4 w-4 sm:h-5 sm:w-5 text-green-500 animate-pulse" />
               )}
-              <Search className={`h-5 w-5 transition-all duration-300 ${
+              <Search className={`h-4 w-4 sm:h-5 sm:w-5 transition-all duration-300 ${
                 isFocused ? 'text-green-500 scale-110' : 'text-gray-400'
               }`} />
             </div>
@@ -84,7 +84,7 @@ export default function QuoteForm({ onSearch, isLoading }: QuoteFormProps) {
         
         <Button 
           type="submit" 
-          className={`w-full h-14 text-lg font-semibold rounded-lg transition-all duration-500 transform ${
+          className={`w-full h-12 sm:h-14 text-base sm:text-lg font-semibold rounded-lg transition-all duration-500 transform ${
             isAnimating ? 'scale-95' : 'hover:scale-105'
           } relative overflow-hidden group text-white`}
           disabled={isLoading || !topic.trim()}
@@ -98,25 +98,25 @@ export default function QuoteForm({ onSearch, isLoading }: QuoteFormProps) {
         >
           <span className="absolute inset-0 bg-gradient-to-r from-green-400 to-blue-500 opacity-0 group-hover:opacity-20 transition-opacity duration-300"></span>
           
-          <div className="relative z-10 flex items-center justify-center space-x-3">
+          <div className="relative z-10 flex items-center justify-center space-x-2 sm:space-x-3">
             {isLoading ? (
               <>
-                <div className="animate-spin rounded-full h-6 w-6 border-2 border-white border-t-transparent"></div>
-                <span>Searching...</span>
+                <div className="animate-spin rounded-full h-5 w-5 sm:h-6 sm:w-6 border-2 border-white border-t-transparent"></div>
+                <span className="text-sm sm:text-base">Searching...</span>
               </>
             ) : (
               <>
-                <Zap className="h-6 w-6 group-hover:animate-pulse" />
-                <span>Find Inspiring Quotes</span>
+                <Zap className="h-5 w-5 sm:h-6 sm:w-6 group-hover:animate-pulse" />
+                <span className="text-sm sm:text-base">Find Inspiring Quotes</span>
               </>
             )}
           </div>
         </Button>
       </form>
       
-      {/* Animated hint text */}
-      <div className="mt-4 text-center">
-        <p className="text-sm text-gray-500 animate-pulse">
+      {/* Animated hint text - responsive text size */}
+      <div className="mt-3 sm:mt-4 text-center">
+        <p className="text-xs sm:text-sm text-gray-500 animate-pulse">
           ✨ Press Enter or click the button to search
         </p>
       </div>
