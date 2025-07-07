@@ -23,19 +23,24 @@ A modern, responsive web application for discovering and sharing inspirational q
 
 ## Features
 
-- Copy quote to clipboard with a single click
-- Responsive design for mobile, tablet, and desktop
-- Toast notifications for user feedback (e.g., successful copy)
-- Clean, accessible UI with smooth transitions
+
+- **Copy Quote**: Users can copy the displayed quote to their clipboard with a single click. A toast notification confirms the copy action.
+- **Search Quotes by Category**: Users can search for quotes by selecting a category (e.g., "success", "motivation"). The app will display a random quote from the chosen category.
+- **Responsive Design**: The app’s layout is fully responsive, providing an optimal experience across mobile, tablet, and desktop devices.
+- **Toast Notifications**: User actions like copying a quote trigger toast notifications for visual feedback.
+- **Accessible UI**: A clean, accessible UI with smooth transitions for a pleasant user experience.
+
 
 ---
 
 ## Functional Requirements
 
-- On page load, a UI searchbox is displayed to enter topic from any category in `quotes.json`.
-- Users can copy the current quote to their clipboard; a toast notification confirms the action.
-- The app is fully responsive and adapts to various screen sizes.
-- All quotes are sourced from a local JSON file for fast, offline access.
+- **On Initial Load**: The app displays UI to search from a given set of topics.
+- **Category Selection**: Users can select a category (e.g., "success", "motivation") from a listed categories.
+- **Copy to Clipboard**: Users can copy the displayed quote to the clipboard with a single click. Upon success, a toast notification confirms the action.
+- **Toast Feedback**: Users receive immediate feedback via toast notifications when copying quotes or generating new quotes.
+- **Responsive UI**: The layout adjusts seamlessly to different screen sizes, ensuring that mobile, tablet, and desktop users all have an optimal experience.
+- **Offline Data**: All quotes are stored locally within the app, ensuring it works offline with no external API dependencies.
 
 ---
 
