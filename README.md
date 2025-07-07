@@ -17,14 +17,12 @@ A modern, responsive web application for discovering and sharing inspirational q
 
 ## Live Demo
 
-[View the Live App on Vercel](https://your-vercel-app-url.vercel.app)
+[View the Live App on Vercel](https://quote-generator-peach-two.vercel.app/)
 
 ---
 
 ## Features
 
-- Display a random quote from a curated collection, organized by category
-- "New Quote" button to generate another random quote
 - Copy quote to clipboard with a single click
 - Responsive design for mobile, tablet, and desktop
 - Toast notifications for user feedback (e.g., successful copy)
@@ -34,8 +32,7 @@ A modern, responsive web application for discovering and sharing inspirational q
 
 ## Functional Requirements
 
-- On page load, a random quote is displayed from any category in `quotes.json`.
-- Users can click "New Quote" to display a different random quote.
+- On page load, a UI searchbox is displayed to enter topic from any category in `quotes.json`.
 - Users can copy the current quote to their clipboard; a toast notification confirms the action.
 - The app is fully responsive and adapts to various screen sizes.
 - All quotes are sourced from a local JSON file for fast, offline access.
