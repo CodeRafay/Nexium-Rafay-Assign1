@@ -1,5 +1,5 @@
 # Quote Generator Web App
-
+This is a Quote Generator Web App built as part of the [Nexium AI-First Web Development Internship (July 2025)](https://www.nexium.ltd/Bootcamp/Student-Handbook).
 A modern, responsive web application for discovering and sharing inspirational quotes. Built with Next.js 14+ and a clean UI powered by shadcn components and Tailwind CSS, this app allows users to view, copy, and generate random quotes from a curated local collection.
 
 ---
@@ -188,7 +188,7 @@ Open [http://localhost:3000](http://localhost:3000) in your browser to view the 
 
 ## License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [Apache 2.0 License](LICENSE).
 
 ---
 
